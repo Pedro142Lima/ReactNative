@@ -29,7 +29,7 @@ export default function Pag_Inicial(){
             </View>
 
             <View style={styles.wave}>
-                <Image source={require('/Users/einvi/Downloads/projeto1/projeto-reactN/src/images/bg waves (1).png')} style={styles.img}/>
+                <Image source={require('../../images/bg waves (1).png')} style={styles.img}/>
             </View>
         </View>
     );

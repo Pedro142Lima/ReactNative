@@ -20,7 +20,7 @@ export default function PagSalas(){
         
 
         <View style={styles.wave}>
-                <Image source={require('/Users/einvi/Downloads/projeto1/projeto-reactN/src/images/bg waves (1).png')}/>
+                <Image source={require('../../images/bg waves (1).png')}/>
         </View>
             
         </View>
