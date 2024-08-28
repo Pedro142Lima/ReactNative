@@ -5,11 +5,12 @@ import PagAndares from '../Pag_andares';
 import Card from '../componentes/Card';
 import Titulo from '../componentes/Titulo';
 import PagSalas from '../Pag_Salas';
+import Api from '../componentes/Apiteste';
 
 export default function Main( ){
     return(
         <View>
-        
+        <Api/>
         </View>
     );
 

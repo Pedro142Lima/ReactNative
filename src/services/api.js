@@ -1,4 +1,4 @@
-import axios from 'axios'
+
 
 // git clone https://github.com/Pedro142Lima/ReactNative.git
 // cd ReactNative
@@ -6,18 +6,18 @@ import axios from 'axios'
 // npm i -g expo-cli
 // npm i axios 
 
-const express = require('express');
-const mysql = require('mysql2');
+import express from 'express';
+import mysql from 'mysql2';
+
 
 const app = express();
 app.use(express.json());
 
-// Configure sua conexão MySQL
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'seu_usuario',
-  password: 'sua_senha',
-  database: 'seu_banco_de_dados'
+  user: 'root',
+  password: '1234',
+  database: 'testedoreact'
 });
 
 db.connect(err => {
@@ -25,16 +25,13 @@ db.connect(err => {
   console.log('Conectado ao banco de dados MySQL');
 });
 
-// Rota de exemplo para obter dados
 app.get('/dados', (req, res) => {
-  db.query('SELECT * FROM sua_tabela', (err, results) => {
+  db.query('SELECT * FROM users', (err, results) => {
     if (err) throw err;
     res.json(results);
   });
 });
 
-// Inicie o servidor
 app.listen(3000, () => {
   console.log('Servidor backend rodando na porta 3000');
 });
-
