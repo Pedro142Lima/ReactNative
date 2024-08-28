@@ -1,4 +1,4 @@
-package com.projetoreactn
+package com.anonymous.projetoreactN
 
 import android.os.Build
 import android.os.Bundle

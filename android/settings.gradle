@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'projetoreactN'
+rootProject.name = 'projeto-reactN'
 
 dependencyResolutionManagement {
   versionCatalogs {

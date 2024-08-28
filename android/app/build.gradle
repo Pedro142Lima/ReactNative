@@ -109,13 +109,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.projetoreactn"
+    namespace 'com.anonymous.projetoreactN'
     defaultConfig {
-        applicationId "com.projetoreactn"
+        applicationId 'com.anonymous.projetoreactN'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     signingConfigs {
         debug {

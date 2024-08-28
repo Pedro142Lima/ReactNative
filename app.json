@@ -2,6 +2,12 @@
   "expo": {
     "name": "projeto-reactN",
     "slug": "projeto-reactN",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "plugins": [
+      "expo-font"
+    ],
+    "android": {
+      "package": "com.anonymous.projetoreactN"
+    }
   }
 }
