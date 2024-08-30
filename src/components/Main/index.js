@@ -10,7 +10,7 @@ import Api from '../componentes/Apiteste';
 export default function Main( ){
     return(
         <View>
-        <Api/>
+            <Pag_Inicial/>
         </View>
     );
 

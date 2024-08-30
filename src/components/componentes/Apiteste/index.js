@@ -10,7 +10,7 @@ export default function Api() {
   const [dados, setDados] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/dados')
+    axios.get('http://192.168.0.14:3000/dados')
       .then(response => setDados(response.data))
       .catch(error => console.error(error));
   }, []);

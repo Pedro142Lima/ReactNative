@@ -1,7 +1,9 @@
 import React from 'react';
-import { View , Text, Image,  StyleSheet, TouchableOpacity} from 'react-native'
-import { useFonts, Montserrat_700Bold } from '@expo-google-fonts/montserrat'
+import { View , Text, Image,  StyleSheet, TouchableOpacity, ImageBackground} from 'react-native'
+import { useFonts, Montserrat_700Bold, Montserrat_300Light } from '@expo-google-fonts/montserrat'
+import Titulo from '../componentes/Titulo';
 export default function Pag_Inicial(){
+
 
     const [fontLoaded] = useFonts({
         Montserrat_700Bold
@@ -16,22 +18,35 @@ export default function Pag_Inicial(){
     return(
         <View style={styles.controle}>
             <View style={styles.faixa}>
-                <Image source={require('/Users/einvi/Downloads/projeto1/projeto-reactN/src/images/vetor_frei.png')} style={styles.frei}/>
-                <View style={styles.fxtxt}><Text style={styles.txt1}>Feira das profissões</Text></View>
+             <ImageBackground 
+        source={require('/Users/einvi/Downloads/projeto1/projeto-reactN/src/images/novaWave.png')} 
+        style={styles.background} 
+      >
+       
+        <View style= {styles.alinhamento}>
+                <Image source={require('/Users/einvi/Downloads/projeto1/projeto-reactN/src/images/logoFrei.png')} style={styles.frei}/>
+
+                <Text style={{fontFamily: 'Montserrat_700Bold',color: '#fff', fontSize: 30, textAlign: 'center', width: 320, marginTop: 30,}}>Seja bem-vindo a Feira das Profissões 2024!</Text>
+
                 
-            </View>
-
-            <View style={styles.txt_bt}>
-                <Text style={{fontFamily: 'Montserrat_700Bold', fontSize: 25, textAlign: 'center', width: 300, marginTop: 100, marginBottom: 100}}>Seja bem-vindo a Feira das Profissões 2024!</Text>
-                <TouchableOpacity style={styles.botao} onPressIn={{backgroundColor: '#000'}}>
-                <Text style={{textAlign: 'center', fontFamily: 'Montserrat_700Bold', marginTop: 15, fontSize: 40, color: '#fff'}}>Começar</Text>
-                </TouchableOpacity> 
-            </View>
-
-            <View style={styles.wave}>
-                <Image source={require('../../images/bg waves (1).png')} style={styles.img}/>
-            </View>
         </View>
+             </ImageBackground>
+
+             <TouchableOpacity style={styles.botao}>
+                <Text style={{textAlign: 'center', fontFamily: 'Montserrat_700Bold', fontSize: 40, color: '#fff',}}>Começar</Text>
+             </TouchableOpacity> 
+
+
+            </View>
+
+         <View style={styles.footer}> 
+                    <Text style={{textAlign: 'center', fontFamily: 'Montserrat_700Bold', fontSize: 30, color: '#fff',}}>INSF</Text>
+
+                    <Text style={{textAlign: 'center', fontFamily: 'Montserrat_300Light', fontSize: 15, color: '#fff',}}>2024 C</Text>
+         </View>
+        </View>
+
+        
     );
 }
 
@@ -43,54 +58,40 @@ export default function Pag_Inicial(){
 const styles = StyleSheet.create({
 //Controle
 controle: {
- height: '100%',
- width: '100%'
+    height: '100%',
+    width: '100%'
 },
-//Sessão 1
- faixa: {
-    flexDirection: 'row',
-    width: 720,
-    height: 140,
-    alignItems:'center',
-    backgroundColor: '#163396',
-    elevation: 5,
- },
- fxtxt: {
-    marginLeft: 20,
- },
- txt1:{
-    fontSize: 25,
-    fontFamily: 'Montserrat_700Bold',
-    color: '#fff',
-    marginTop: 20
+ background: {
+    height: 450,
+    width:'auto'
  },
  frei: {
-    height: 90,
-    width: 70,
-    margin: 5,
-    marginLeft: 10,
-    marginTop: 20,
+    height: 180,
+    width: 180,
     
  },
-
-
- //Sessão 2
-
- txt_bt: {
-    alignItems: 'center',
-    justifyContent:'center',
-    
+ alinhamento: {
+    alignItems:'center',
+    marginTop: 50
  },
- wave: {
-    position: 'absolute',
-    bottom: 0
- },
-
  botao: {
-    textAlign:'center',
-    backgroundColor: '#163396',
+    marginTop: 80,
     height: 90,
-    width: 240,
-    borderRadius: 12
+    width: 250,
+    borderRadius: 12,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FF8D00',
+
+ },
+ footer: {
+    position: 'absolute',
+    bottom: 0,
+    backgroundColor: '#182754',
+    height: 110,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
  }
-})
+ }
+)
